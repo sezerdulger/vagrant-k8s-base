@@ -38,6 +38,9 @@ function install {
   apt-get update
   apt-get install -y kubelet=1.8.7-00 kubeadm=1.8.7-00 kubectl=1.8.7-00 kubernetes-cni=0.5.1-00
   apt-get install -y bash-completion
+  source <(kubectl completion bash)
+  echo "source <(kubectl completion bash)" >> ~/.bashrc
+  echo ". /etc/bash_completion" >> ~/.bashrc
   
 }
 
